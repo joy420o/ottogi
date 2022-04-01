@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ottogi</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#top_bt').click(function(){
+                $('body,html').animate({'scrollTop':'0'},500)
+            })
+            // top scroll 
+
+            $('#event1_btn>li:nth-child(1)').click(function(){
+                $(this).css({'background-color':'yellow'}).siblings('.event1_slide_bt').css({'background-color':'#fff'})
+                $('#event_slide').animate({'left':'0'})
+            })
+            $('#event1_btn>li:nth-child(2)').click(function(){
+                $(this).css({'background-color':'yellow'}).siblings('.event1_slide_bt').css({'background-color':'#fff'})
+                $('#event_slide').animate({'left':'-600px'})
+            })
+            $('#event1_btn>li:nth-child(3)').click(function(){
+                $(this).css({'background-color':'yellow'}).siblings('.event1_slide_bt').css({'background-color':'#fff'})
+                $('#event_slide').animate({'left':'-1200px'})
+            })
+            $('#event1_btn>li:nth-child(4)').click(function(){
+                $(this).css({'background-color':'yellow'}).siblings('.event1_slide_bt').css({'background-color':'#fff'})
+                $('#event_slide').animate({'left':'-1800px'})
+            })
+            $('#event2_btn>li:nth-child(1)').click(function(){
+                $(this).css({'background-color':'yellow'}).siblings('.event1_slide_bt').css({'background-color':'#fff'})
+                $('#event2_slide').animate({'left':'0'})
+            })
+            $('#event2_btn>li:nth-child(2)').click(function(){
+                $(this).css({'background-color':'yellow'}).siblings('.event1_slide_bt').css({'background-color':'#fff'})
+                $('#event2_slide').animate({'left':'-300px'})
+            })
+            $('#event2_btn>li:nth-child(3)').click(function(){
+                $(this).css({'background-color':'yellow'}).siblings('.event1_slide_bt').css({'background-color':'#fff'})
+                $('#event2_slide').animate({'left':'-600px'})
+            })
+            // 
+            $('#sns_menu>li:nth-child(1)').click(function(){
+                $(this).css({"background-color":"#223a6a","color":"#fff"}) 
+                $(this).siblings().css({"background-color":" #ebeff1","color":"#666"})
+                $("#sns_content1").show()
+                $("#sns_content2").hide()
+                $("#sns_content3").hide()
+            })
+            $('#sns_menu>li:nth-child(2)').click(function(){
+               $(this).css({"background-color":"#223a6a","color":"#fff"}) 
+               $(this).siblings().css({"background-color":" #ebeff1","color":"#666"})
+               $("#sns_content2").show()
+               $("#sns_content1").hide()
+               $("#sns_content3").hide()
+           })
+           $('#sns_menu>li:nth-child(3)').click(function(){
+               $(this).css({"background-color":"#223a6a","color":"#fff"}) 
+               $(this).siblings().css({"background-color":" #ebeff1","color":"#666"})
+               $("#sns_content3").show()
+               $("#sns_content2").hide()
+               $("#sns_content1").hide()
+           })
+        })
+    </script>
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        @font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+    @font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+        * {margin: 0; padding: 0; list-style: none; font-family: 'GmarketSansMedium';}
+
+        #top_bt {position: fixed; top: 850px; right: 0; width: 70px; height: 70px; opacity: 0.9; cursor: pointer;}
+
+        header {width: 1920px; height: 190px; background-color: #fef100;}
+        #header_box {width: 1200px; height: 190px; margin: auto; overflow: hidden; position: relative;}
+        #header_icon {width: 64px; height: 23px; position: absolute; right: 30px; top: 30px;}
+        #header_icon>li {float: left; margin: 3px;}
+        #header_box1 {width: 1200px; height: 98px; margin-top: 15px; }
+        
+        #logo {text-align: center;}
+        
+        #header_box2 {width: 1200px; height: 77px;}
+        #header_box2>ul {line-height: 74px; text-align: center;} 
+        #header_box2>ul>li {width: 200px; height: 77px; float: left; background: url(icons/bul_vline.png)0 32px no-repeat; box-sizing: border-box; font-size: 18px;}
+        #header_box2>ul>li:first-child {background:none;}
+        #header_box2>ul>li:hover {border-bottom: 3px solid #dc2c34; color: #dc2c34; cursor: pointer;}
+        /*  */
+        #slide {width: 1920px; height: 530px; background: url(images/img_visual36.jpg) center top no-repeat; position: relative;}
+        #slide_leftbtn {width: 40px;height: 60px; background: url(icons/bx-prev2.png) center no-repeat; position: absolute ; left: 70px; top: 80px; bottom: 0; margin: auto;}
+        #slide_rightbtn {width: 40px;height: 60px; background: url(icons/bx-next2.png) center no-repeat; position: absolute ; right: 70px; top: 80px; bottom: 0; margin: auto;}
+        #slide_btn {text-align: center; position: absolute; width: 100%; right: 550px; bottom: 50px;}
+        #slide_btn>li {width: 10px; height: 10px; border-radius: 10px; display: inline-block; background-color: #fff; margin-right: 5px;}
+        #slide_btn>li:nth-child(3) {background-color: yellow;}
+        #slide_btn>li:nth-child(9) {background-color: rgba(255, 255, 255, 0); margin-left: 10px;}
+        #slide_btn>li:nth-child(10) {background-color: rgba(255, 255, 255, 0);}
+        /*  */
+        #section_menu {width: 1200px; height: 288px; margin: auto; margin-top: 20px;}
+        #section_menu>ul {}
+        #section_menu>ul>li {width: 288px; height: 288px; margin-right: 16px; background-color: rgb(255, 136, 136); float: left; text-align: center; color: #fff;}
+        #section_menu>ul>li:nth-child(1) {background: url(images/bgM5.jpg);}
+        #section_menu>ul>li:nth-child(2) {background: url(images/bgM1.jpg);}
+        #section_menu>ul>li:nth-child(3) {background: url(images/bgM3.jpg);}
+        #section_menu>ul>li:nth-child(4) {background: url(images/bgM4.jpg); margin-right: 0;}
+        #section_menu>ul>li>h3 {font-size: 30px; margin-top: 110px;}
+        #section_menu>ul>li>h4 {font-size: 22px; font-weight: 100;}
+        #section_menu>ul>li>h5 {font-size: 14px; font-weight: 100;}
+        /*  */
+        #news {width: 1200px; height: 292px; margin: auto; margin-top: 40px;}
+        #news>ul {}
+        #news>ul>li {width: 292px; height: 292px; float: left; margin-right: 10px;  }
+        #news>ul>li:last-child {margin-right: 0;}
+        #news>ul>li>h2 { font-size: 30px;  color: rgb(19, 19, 19); font-family: 'GmarketSansLight';}
+        #news>ul>li>h5 {color: #dc2c34; margin-top: 16px; margin-left: 80px; font-family: 'GmarketSansLight';}
+        #news>ul>li>h3 { color: rgb(19, 19, 19); font-family: 'GmarketSansLight'; font-size: 18px; letter-spacing: -1px;}
+        #news>ul>li>p {font-size: 14px; margin-top: 20px; color: rgb(19, 19, 19); font-weight: 100; font-family: 'GmarketSansLight'; font-weight: 900; line-height: 20px;}
+        /*  */
+        #event {width: 1200px; height: 400px; margin: auto; margin-top: 5px; font-size: 20px; font-family: 'GmarketSansLight';}
+        #event1 {width:600px; height: 400px; float: left;}
+        #event1>h2 {font-family: 'GmarketSansLight';}
+        #event2>h2 {font-family: 'GmarketSansLight';}
+        #event1_box {width: 600px; height: 300px;  margin-top: 15px; position: relative; overflow: hidden;}
+        #event_slide {width: 2400px; height: 300px; position: absolute; }
+        #event_slide>li {float: left;}
+        #event_slide>li>img {width: 100%; height: 300px; cursor: pointer;}
+        
+        #event1_btn {width: 170px; height: 27px; border-radius: 20px; background-color: #ccc; margin: auto; margin-top: 5px; text-align: center; line-height: 27px;}
+        #event1_btn>li {width: 12px; height: 12px; border-radius: 10px; display: inline-block; background-color: #fff; vertical-align: middle; cursor: pointer;}
+        #event1_btn>li>img {vertical-align: top;}
+        #event1_btn>li:nth-child(1) {background-color: yellow;}
+        #event1_btn>li:nth-child(5) {background-color: rgba(255, 255, 255, 0);}
+        #event1_btn>li:nth-child(6) {background-color: rgba(255, 255, 255, 0);}
+        
+        #event2 {width: 25%; height: 400px; float: left;}
+        #event2_box {width: 100%; height: 300px; overflow: hidden; margin-top: 7px; position: relative; overflow: hidden;}
+        #event2_new {width: 60px; height: 60px; background: url(icons/flag_new.png) no-repeat; background-size: 42px; position: absolute; right: 0; top: 10px;}
+        #event2_slide {width: 900px; height: 300px; position: absolute;}
+        #event2_slide>li {float: left;}
+        #event2_slide>li>img {width: 100%; height: 300px; cursor: pointer;}
+        #event2_btn {width: 170px; height: 27px; border-radius: 20px; background-color: #ccc; margin: auto; margin-top: 5px; text-align: center; line-height: 27px;}
+        #event2_btn>li {width: 12px; height: 12px; border-radius: 10px; display: inline-block; background-color: #fff; vertical-align: middle; cursor: pointer;}
+        #event2_btn>li>img {vertical-align: top;}
+        #event2_btn>li:nth-child(1) {background-color: yellow;}
+        #event2_btn>li:nth-child(4) {background-color: rgba(255, 255, 255, 0); }
+        #event2_btn>li:nth-child(5) {background-color: rgba(255, 255, 255, 0);}
+        
+        #event3 {width: 25%; height: 400px; float: left;}
+        #event3_box {width: 100%; height: 300px; margin-top:52px; border: 1px solid #eee; text-align: center; position: relative;}
+        #event3_new {width: 60px; height: 60px; position: absolute; background: url(icons/flag_new.png) no-repeat; position: absolute; right: 0; top: 10px; background-size: 42px; } 
+        #event3_box>img {width: 54%; height: 200px;}
+        #event2_box:hover>img {cursor: pointer;}
+        #event3_box>h4 {font-weight: 600; font-family: 'GmarketSansLight'; font-size: 18px;}
+        #event3_box>h5 {font-family: 'GmarketSansLight'; font-size: 14px;}
+        /*  */
+        #section_best {width: 1920px; height: 600px; background: url(images/visual_06.jpg) center top no-repeat; margin-top: 25px; }
+        #section_best_box {width: 80%; height: 505px; margin: auto; margin-top: 100px; text-align: center; color: #fff; position: relative;}
+        #best_btnleft {width: 40px;height: 60px; background: url(icons/bx-prev2.png) center no-repeat; position: absolute ; left: 110px; top: 350px; margin: auto;}
+        #best_btnleft:hover {width: 40px; height: 60px; border: 1px solid rgba(255, 255, 255, 0.418); cursor: pointer; box-sizing: border-box;}
+        #best_btnright:hover {width: 40px; height: 60px; border: 1px solid rgba(255, 255, 255, 0.418); cursor: pointer; box-sizing: border-box;}
+        #best_btnright {width: 40px;height: 60px; background: url(icons/bx-next2.png) center no-repeat; position: absolute ; right: 110px; top: 350px; margin: auto;}
+        #section_best_box>h2 {padding-top: 50px; font-family: 'GmarketSansLight'; font-weight: 800; font-size: 36px;}
+        #line {width: 40px; height: 1px; background-color: #fff; margin: auto; margin-top: 10px;}
+        #section_best_box>h3 {font-family: 'GmarketSansLight'; font-weight: 600; font-size: 16px; margin-top: 15px; position: relative;}
+       
+        #best_box {width:1200px; height: 320px; margin: auto; margin-top: 30px; }
+        #best_box>li {width: 220px; height: 320px; background-color: #fff; float: left; margin: 10px; border-radius: 3px;  text-align: center; position: relative; overflow: hidden;}
+        #best_box>li>img {width: 175px; height: 200px;}
+        #best_box>li>.best_bgimg {width: 220px; height: 10px; position: absolute;right: 0; left: 0; bottom: 110px;}
+        #best_box>li>h4 {height: 45px; color: rgb(71, 71, 71); font-size: 18px; font-family: 'GmarketSansLight'; margin-top: 20px; padding:0 18px;}
+        #best_box>li>h5 {color: rgb(71, 71, 71); font-size: 14px; font-family: 'GmarketSansLight'; margin-top: 10px;}
+        #best_box>li>.best_hover { width: 100%; height: 100%; background-color: rgba(255, 0, 0, 0.562); position: absolute; left: 0; bottom: -100%; transition: 0.2s;}
+        #best_box>li:hover>.best_hover { width: 100%; height: 100%; background-color: rgba(255, 0, 0, 0.562); position: absolute; left: 0; bottom: 0; cursor: pointer;}
+        #best_box>li>.best_hover>.hover_box {width: 164px; height: 264px; border: 1px solid rgba(255, 255, 255, 0.418); position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;}
+        #best_box>li>.best_hover>.hover_box>img {position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;}
+        /*  */
+        #okitchen {width: 1920px; height: 587px; background-color: #fffee5; overflow: hidden;}
+        #okitchen_box {width: 1200px; height: 487px; margin: auto; margin-top: 50px; text-align: center;}
+        #okitchen_box>h2 {font-size: 34px; color: #333; font-family: 'GmarketSansLight'; line-height: 60px;}
+        #okitchen_line {width: 42px; height: 1px; background-color: red; margin-top:20px; margin: auto;}
+        
+        #okitchen_box>h4 {margin-top: 20px; color: #666; font-size: 16px; font-family: 'GmarketSansLight';}
+        #okitchen_box>ul {width: 1200px; height: 300px; margin-top: 30px;}
+        #okitchen_box>ul>li {width: 277px; height: 300px; margin-right: 30px; float: left;}
+        #okitchen_box>ul>li:last-child {margin-right: 0;}
+        #okitchen_box>ul>li>img {width: 100%;}
+        #okitchen_box>ul>li>h5 {color: #333; font-family: 'GmarketSansLight'; margin-top: 15px; text-align: left;}
+        #okitchen_box>ul>li>h4 {color: #333; font-size: 18px; text-align: left; font-weight:600;}
+        /*  */
+        #sns{width: 1200px; height: 720px; margin: auto; text-align: center; overflow: hidden;}
+        #sns>h2 {font-size: 34px; color: #333; font-family: 'GmarketSansLight'; line-height: 50px; margin-top: 40px; }
+        #sns>#sns_line {width: 42px; height: 1px; background-color: red; margin-top:20px; margin: auto;}
+        #sns>h4 {margin-top: 20px; color: #666; font-size: 16px; font-family: 'GmarketSansLight';}
+        #sns_menu {height: 1200px; height: 53px; line-height: 52px; margin: auto; margin-top: 20px; background-color: #ebeff1;}
+        #sns_menu>li {float: left; width: 300px; height: 53px; transition: 0.2s;}
+        #sns_menu>li:hover {background-color: #223a6a; color: #fff; cursor: pointer; font-family: 'GmarketSansMedium'; font-weight: 600;}
+        #sns_menu>li:first-child {background-color: #223a6a; color: #fff;}
+        #sns_menu>li:nth-child(2) {font-family: 'GmarketSansLight'; font-weight: 600;}
+        #sns_menu>li:nth-child(3) {font-family: 'GmarketSansLight'; font-weight: 600;}
+        
+        #sns_content1 {}
+        #sns_content2 {display: none;}
+        #sns_content3 {display: none;}
+        #sns_conten {width: 1200px; height: 366px; margin: auto; }
+        #sns_content ul {width: 1200px; height: 366px; margin-top: 48px;}
+        #sns_content ul>li {width: 292px; height: 336px; margin-right: 10px; float: left;}
+        #sns_content ul>li:last-child {margin-right: 0;}
+        #sns_content ul>li>img {width: 292px; height: 292px;}
+        #sns_content ul>li>p {font-family: 'GmarketSansLight'; text-align: left; font-size: 13px; font-weight: 600;}
+        /*  */
+        footer {width: 100%; height: 200px; margin-top: 30px; color: #333; position: relative;}
+        #footer1 {width:100%; height: 65px; margin: auto; background-color: #f7f7f7; border-top: 1px solid #e4e4e4; border-bottom: 1px solid #e4e4e4;}
+        #footer1_box {width:1200px; height: 35px; margin: auto; margin-top: 15px; }
+        #footer1_menu {width: 580px; height: 35px; float: left; line-height: 35px;}
+        #footer1_menu>li {float: left; margin-right: 30px; font-family: 'GmarketSansLight'; font-weight: 600;}
+        #footer1_menu>li:first-child {font-family: 'GmarketSansMedium';}
+        #footer1_menu>li:last-child {margin-right: 0;}
+        #footer1_icon {width: 175px; height: 35px; float: right;}
+        #footer1_icon>li {float: left; margin-right: 10px;}
+        #footer1_icon>li:last-child {margin-right: 0;}
+
+        #footer2 {width: 1200px; height: 120px; margin: auto; position: relative;}
+        #footer_logo {width: 180px; height: 100px; margin-top: 25px;}
+        #footer2_menu {width: 630px; height: 80px; margin-top: 10px; position: absolute; left: 180px; right: 0; top: 0; bottom: 0;}
+        #footer2_menu>ul {overflow: hidden; line-height: 24px; }
+        #footer2_menu>ul>li {float: left;  font-size: 12px;  font-family: 'GmarketSansLight'; font-weight: 900;}
+        #footer2_menu>ul>li::after {content: '|' ; margin:0 10px;}
+        #footer2_menu>p {font-size: 12px; clear: both; margin-top: 15px;}
+        #footer2_icon {width: 320px; height: 100px; margin-top: 25px; float: right; position: absolute; right: 0; top: 0; bottom: 0; margin-top: 0;}
+        #footer2_icon>img {width: 100%;}
+    </style>
+</head>
+<body>
+    <div id="top_bt"><img src="icons/btn_Top.png" alt=""></div>
+    <!-- header -->
+    <header>
+        <div id="header_box">
+            <ul id="header_icon">
+                <li><img src="icons/icon_lang.png" alt=""></li>
+                <li><img src="icons/top_chat.png" alt=""></li>
+            </ul>
+            <div id="header_box1">
+                <h1 id="logo"><img src="icons/logo.png" alt=""></h1>
+            </div>
+            <div id="header_box2">
+                <ul>
+                    <li>회사소개</li>
+                    <li>제품정보</li>
+                    <li>O'kitchen</li>
+                    <li>홍보센터</li>
+                    <li>고객서비스</li>
+                    <li>오뚜기몰</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- slide -->
+    <div id="slide">
+        <div id="slide_leftbtn"></div>
+        <div id="slide_rightbtn"></div>
+        <ul id="slide_btn">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li><img src="icons/btn_play.png" alt=""> </li>
+            <li><img src="icons/btn_stop.png" alt=""></li>
+        </ul>
+    </div>
+    <!-- -->
+    <div id="section_menu">
+        <ul>
+            <li>
+                <h3>오뚜기몰</h3>
+                <h4>바로가기</h4>
+                <h5>more ></h5>
+            </li>
+            <li>
+                <h3>나눔미학</h3>
+                <h4>사회공헌</h4>
+                <h5>more ></h5>
+            </li>
+            <li>
+                <h3>미래가치</h3>
+                <h4>투자정보</h4>
+                <h5>more ></h5>
+            </li>
+            <li>
+                <h3>자연과함께</h3>
+                <h4>환경 경영</h4>
+                <h5>more ></h5>
+            </li>
+        </ul>
+    </div>
+    <!--  -->
+    <div id="news">
+        <ul>
+            <li>
+                <h2>오뚜기 뉴스</h2>
+                <h5>more ></h5>
+            </li>
+            <li>
+                <h3>자회사형 장애인 표준사업장'(주)오뚜기프렌즈' 개소</h3>
+                <p>오뚜기와 한국장애인고용공단은 지난 11월 11일 오뚜기 안양공장에서 자회사형 장애인 표준사업장 ‘(주)오뚜기프렌즈’ 창립기념식을 개최했습니다.‘자회사형 장애인 표준사업장’은 자회사에 고용된 장애인을 모회사가 고용한 것으로 인정하는 제도로,&... <br>
+                    2021.12.22</p>
+            </li>
+            <li>
+                <h3>롤리폴리 꼬또, `2021KDA 스페이스 부문 위너` 선정</h3>
+                <p>지난 12월 22일 ㈜오뚜기의 브랜드경험 공간 "롤리폴리 꼬또"가 국내 대표 디자인 어워드인 `2021 코리아 디자인 어워드`(KDA)에서 스페이스(공간) 디자인 부문 위너(대상)로 선정 되었습니다.KDA는 "안목 높은 클라이언트가... <br>
+                    2021.12.22</p>
+            </li>
+            <li>
+                <h3>오뚜기, 여성가족부 선정 ‘가족친화기업’ 재인증 획득</h3>
+                <p>㈜오뚜기가 지난 12월 16일 여성가족부가 선정하는 가족친화기업 재인증을 획득했습니다. 가족친화기업 인증은 여성가족부가 출산 및 양육지원 등 가족친화제도를 모범적으로 운영하는 기업 및 공공기관을 대상으로 심사를 통해 인증을 부여하는 제도입니... <br>
+                    2021.12.16</p>
+            </li>
+        </ul>
+    </div>
+    <!--  -->
+
+    <div id="event">
+        <div id="event1">
+            <h2>이벤트</h2>
+            <div id="event1_box">
+                <ul id="event_slide">
+                    <li><img src="images/2022-02-15_388276165.jpg" alt=""></li>
+                    <li><img src="images/2021-06-15_916697337.jpg" alt=""></li>
+                    <li><img src="images/2021-05-27_805369006[5].jpg" alt=""></li>
+                    <li><img src="images/2021.jpg" alt=""></li>
+                </ul>
+            </div> 
+            <ul id="event1_btn">
+                <li class="event1_slide_bt"></li>
+                <li class="event1_slide_bt"></li>
+                <li class="event1_slide_bt"></li>
+                <li class="event1_slide_bt"></li>
+                <li><img src="icons/btn_play.png" alt=""></li>
+                <li><img src="icons/btn_stop.png" alt=""></li>
+            </ul>
+        </div>
+        <div id="event2">
+            <h2>신제품 소개</h2>
+            <div id="event2_box">
+                <ul id="event2_slide">
+                    <li><img src="images/2021-03-26_640442238[1].jpg" alt=""><div id="event2_new"></div></li>
+                    <li><img src="images/2021-01-20_874322340[3] (1).jpg" alt=""><div id="event2_new"></div></li>
+                    <li><img src="images/2021-01-20_874322340.jpg" alt=""><div id="event2_new"></div></li>
+                </ul>
+                
+            </div>
+            <ul id="event2_btn">
+                <li class="event1_slide_bt"></li>
+                <li class="event1_slide_bt"></li>
+                <li class="event1_slide_bt"></li>
+                <li><img src="icons/btn_play.png" alt=""></li>
+                <li><img src="icons/btn_stop.png" alt=""></li>
+            </ul>
+        </div>
+        <div id="event3">
+            <div id="event3_box">
+                <div id="event3_new"></div>
+                <img src="images/2021-12-30_569024252.jpg" alt="">
+                <h4>초간편 감자수제비 키트</h4>
+                <h5>분말/건조식품 > 프리믹스</h5>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div id="section_best">
+        <div id="section_best_box">
+            <h2>오뚜기 인기상품</h2>
+            <div id="line"></div>
+            <h3>오뚜기 인기상품들을 소개 합니다.</h3>
+            <ul id="best_box">
+                <li>
+                    <img src="images/2021-04-20_671244888.jpg" alt="">
+                    <img src="icons/line.png" alt="" class="best_bgimg">
+                    <h4>프레스코 토마토 스파게티소스</h4>
+                    <h5>조미료/식품 > 스파게티소스</h5>
+                    <div class="best_hover">
+                        <div class="hover_box">
+                            <img src="icons/btn_view.png" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/2019-09-19_257227663.jpg" alt="">
+                    <img src="icons/line.png" alt="" class="best_bgimg">
+                    <h4>부산식 돼지국밥 곰탕</h4>
+                    <h5>레토르트/간편식 > 국탕찌개류</h5>
+                    <div class="best_hover">
+                        <div class="hover_box">
+                            <img src="icons/btn_view.png" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/2020-04-10_1002910728.jpg" alt="">
+                    <img src="icons/line.png" alt="" class="best_bgimg">
+                    <h4>진진짜라</h4>
+                    <h5>라면류 > 진진짜라</h5>
+                    <div class="best_hover">
+                        <div class="hover_box">
+                            <img src="icons/btn_view.png" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/2019-11-21_604063404[10].jpg" alt="">
+                    <img src="icons/line.png" alt="" class="best_bgimg">
+                    <h4>콤비네이션 피자</h4>
+                    <h5>냉장/냉동식품 > 냉동피자</h5>
+                    <div class="best_hover">
+                        <div class="hover_box">
+                            <img src="icons/btn_view.png" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li><img src="images/2021-03-04_1052205015.jpg" alt="">
+                    <img src="icons/line.png" alt="" class="best_bgimg">
+                    <h4>진비빔면</h4>
+                    <h5>라면류 > 진비빔면</h5>
+                    <div class="best_hover">
+                        <div class="hover_box">
+                            <img src="icons/btn_view.png" alt="">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div id="best_btnleft"></div>
+            <div id="best_btnright"></div>
+        </div>
+    </div>
+    <!--  -->
+    <div id="okitchen">
+        <div id="okitchen_box">
+            <h2>O'kitchen</h2>
+            <div id="okitchen_line"></div>
+            <h4>오뚜기가 제안하는 맛있고 건강한 요리</h4>
+            <ul>
+                <li>
+                    <img src="images/2020-08-25_427863666.jpg" alt="">
+                    <h5>#3일숙성카레 #카레맛집 # 쇠고기</h5>
+                    <h4>카레 비프 스튜</h4>
+                </li>
+                <li>
+                    <img src="images/2020-08-21_833988909.jpg" alt="">
+                    <h5>#핫케이크 #시나몬 #브런치</h5>
+                    <h4>더치베이비 팬케이크</h4>
+                </li>
+                <li>
+                    <img src="images/2020-08-24_427853121.jpg" alt="">
+                    <h5>#집밥 #밑반찬 #꿀유자차</h5>
+                    <h4>유자 연근조림</h4>
+                </li>
+                <li>
+                    <img src="images/2020-08-24_427850333.jpg" alt="">
+                    <h5>#갈릭아이올리 #계란요리 #브런치</h5>
+                    <h4>에그마요 샌드위치</h4>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--  -->
+        <div id="sns">
+            <h2>오뚜기 SNS</h2>
+            <div id="sns_line"></div>
+            <h4>소셜미디어를 통해 보는 오뚜기 스토리를 소개합니다.</h4>
+            <ul id="sns_menu">
+                <li>오뚜기 데일리</li>
+                <li>오늘,맛으로 행복한세상</li>
+                <li>타바스코 코리아</li>
+            </ul>
+            <div id="sns_content">
+                <ul id="sns_content1">
+                    <li>
+                        <img src="images/0101.jpg" alt="">
+                        <p>온 가족 입맛 사로잡은 간식 등장! 정성스럽게 칼집 넣은 오뚜기햄과 감자를 에.프에...</p>
+                    </li>
+                    <li>
+                        <img src="images/0102.jpg" alt="">
+                        <p>여러분의 졸업을 진심으로 축하드림돠! 아재요원은 2월 졸업 시즌이 다가올 때마다...</p>
+                    </li>
+                    <li>
+                        <img src="images/0103.jpg" alt="">
+                        <p>오뚜기 제2회 푸드 에세이 공모전 음식과 함께하는 여러분의 이야기를 들려주세욧!</p>
+                    </li>
+                    <li>
+                        <img src="images/0104.jpg" alt="">
+                        <p>오늘은 2월 15일~정월대보름임돠! 여러분의 풍요와 안녕을 기원하기 위해 아재요원...</p>
+                    </li>
+                </ul>
+                <ul id="sns_content2">
+                    <li>
+                        <img src="images/0201.jpg" alt="">
+                        <p>여러분의 졸업을 진심으로 축하드림돠! 아재요원은 2월 졸업 시즌이 다가올 때마다...</p>
+                    </li>
+                    <li>
+                        <img src="images/0202.jpg" alt="">
+                        <p>[태그이벤트] HAPPY VALENTINE DAY 공기마저 달달한~ 발렌타인데이의 필수템!</p>
+                    </li>
+                    <li>
+                        <img src="images/0203.jpg" alt="">
+                        <p>간편하게 즐기는 대박 맛집 메뉴 고기리 들기름막국수를 집에서 만나욧! 거기에 육수...</p>
+                    </li>
+                    <li>
+                        <img src="images/0204.jpg" alt="">
+                        <p>취향 따라 즐기는 오뚜끼 컵누들 시리즈! 오늘은 그 중에서도 초딩요원이 애정하는...</p>
+                    </li>
+                </ul>
+                <ul id="sns_content3">
+                    <li>
+                        <img src="images/0301.jpg" alt="">
+                        <p>늘 먹던 팥 대신 통 모짜 호두과자! 집에서까지 만들어 먹는 이 열정...ㅎ</p>
+                    </li>
+                    <li>
+                        <img src="images/0302.jpg" alt="">
+                        <p>K-디저트 삼겹살 볶음밥 삼겹살 지글지글 구워 한판 먹고 밥으로 마무리..</p>
+                    </li>
+                    <li>
+                        <img src="images/0303.jpg" alt="">
+                        <p>지난 주말 야식은 꼬막 국수 타바스코 스리라차로 조물조물 양념하면 국수..</p>
+                    </li>
+                    <li>
+                        <img src="images/0304.jpg" alt="">
+                        <p>이번 크리스마스엔 타바스코와 홈스윗홈</p>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        <!-- footer -->
+        <footer>
+            <div id="footer1">
+                <div id="footer1_box">
+                    <ul id="footer1_menu">
+                        <li>개인정보처리방침</li>
+                        <li>고객상담</li>
+                        <li>찾아오시는 길</li>
+                        <li>오뚜기몰</li>
+                        <li>고객상담 챗봇</li>
+                    </ul>
+                    <ul id="footer1_icon">
+                        <li><img src="icons/insta_icon.png" alt=""></li>
+                        <li><img src="icons/blog_icon.png" alt=""></li>
+                        <li><img src="icons/btn_ff.png" alt=""></li></li>
+                        <li><img src="icons/btn_yt.png" alt=""></li></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="footer2">
+                <h3 id="footer_logo"><img src="icons/f_logo.jpg" alt=""></h3>
+                <div id="footer2_menu">
+                    <ul>
+                        <li>(주)오뚜기</li>
+                        <li>사업자등록번호 : 138-81-03238</li>
+                        <li>대표이사 황성만</li>
+                        <li>주소 (14060) 경기도 안양시 동안구 흥안대로 405 (평촌동 160)</li>
+                        <li>오뚜기 고객상담실 : 080-024-2311</li>
+                        <li>오뚜기라면 고객상담실 : 080-088-1212 (월~금 08:30~17:00)</li>
+                    </ul>
+                    <p>Copyright ⓒ OTTOGI CORPORATION.,Ltd All Rights Reserved.</p>
+                </div>
+                <h6 id="footer2_icon"><img src="icons/2014_WA_mark2.gif" alt=""></h6>
+            </div>
+        </footer>
+        
+</body>
+</html>
